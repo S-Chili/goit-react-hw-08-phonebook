@@ -1,7 +1,7 @@
 import { useLocalStorage } from 'components/App';
 import css from './Contacts.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { addContactThunk } from '../../redux/store';
+import { addContactThunk } from '../../redux/thunks';
 
 export default function ContactForm() {
   const [name, setName] = useLocalStorage('name', ' ');

@@ -1,43 +1,42 @@
-import { configureStore, createAsyncThunk } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
+import { authReducer } from './autoSlice';
+//import { userSignupThunk, userLoginThunk, userLogoutThunk, getContactsThunk, addContactThunk, deleteContactThunk } from './thunks';
 import {
-  getContacts,
-  addContact,
-  deleteContact,
-} from './operations';
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-export const getContactsThunk = createAsyncThunk(
-  'contacts/fetchAll',
-  async (_, thunkAPI) => {
-    try {
-      const data = await getContacts();
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+const middleware = [
+  ...getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    },
+  }),
+];
 
-export const addContactThunk = createAsyncThunk(
-  'contacts/addContact',
-  async contact => {
-    const data = await addContact(contact);
-    return data;
-  }
-);
-
-export const deleteContactThunk = createAsyncThunk(
-  'contacts/deleteContact',
-  async id => {
-    const data = await deleteContact(id);
-    return data;
-  }
-);
+const authPersistConfig = {
+  key: 'auth',
+  storage: storage,
+  whitelist: ['token'],
+};
 
 export const store = configureStore({
   reducer: {
+    auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
     filter: filterReducer,
   },
+  middleware,
+  devTools: process.env.NODE_ENV === 'development',
 });
+
+export const persistor = persistStore(store);

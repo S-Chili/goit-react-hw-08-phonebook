@@ -9,21 +9,23 @@
 
 .FormBtn {
   width: 100px;
-  height: 30px;
-  color: #745f79;
+  height: 27px;
+  color: #9a7898db;
   cursor: pointer;
   font-weight: 700;
   text-decoration: none;
   list-style: none;
-  box-shadow: 1px 1px 10px #daadc2;
+  box-shadow: 2px 2px 10px #b2a2b8;
   margin-top: 20px;
+  border: 0;
+  border-radius: 3px;
 }
 
 .FormBtn:hover {
-  box-shadow: 3px 3px 3px rgba(121, 110, 124, 0.87);
-  background-color: rgb(142, 106, 158);
-  color: #e8e5de;
-  border-color: #d0c5d8;
+  box-shadow: 3px 3px 3px hsla(300, 9%, 26%, 0.331);
+  background-color: hsla(303, 32%, 75%, 0.859);
+  color: #e8e7e5;
+  border-color: #b2a2b8;
 }
 
 .FormItem {

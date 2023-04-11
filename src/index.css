@@ -7,6 +7,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #DEE2E5;
+background-image: 
+linear-gradient(transparent 99px, white 99px), 
+linear-gradient(90deg, transparent 99px, white 99px), 
+linear-gradient(transparent 19px, rgba(255, 255, 255, 0.507) 19px), 
+linear-gradient(90deg, transparent 19px, rgba(255, 255, 255, 0.418) 19px);
+background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    
 }
 
 code {

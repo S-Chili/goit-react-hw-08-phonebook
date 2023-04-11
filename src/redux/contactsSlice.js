@@ -3,7 +3,7 @@ import {
   getContactsThunk,
   addContactThunk,
   deleteContactThunk,
-} from './store';
+} from './thunks';
 
 const contactsSlice = createSlice({
   name: 'contacts',

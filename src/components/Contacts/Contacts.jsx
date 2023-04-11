@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import css from './Contacts.module.css'
 import Filter from './Filter';
 import {  useDispatch, useSelector } from 'react-redux';
-import { deleteContactThunk } from 'redux/store';
-import { getContactsThunk } from 'redux/store';
+import { deleteContactThunk, getContactsThunk } from '../../redux/thunks';
 
-function Contacts() {
+
+function ContactsList() {
   const dispatch = useDispatch();
 
   const contacts = useSelector(state => state.contacts.items);
@@ -38,4 +38,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default ContactsList;
