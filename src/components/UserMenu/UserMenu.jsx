@@ -6,6 +6,7 @@ import LoginTwoToneIcon from '@mui/icons-material/LoginTwoTone';
 import Box from '@mui/material/Box';
 import { NavLink } from 'react-router-dom';
 import css from './UserMenu.module.css'
+import Typography from '@mui/material/Typography';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -18,8 +19,8 @@ const UserMenu = () => {
     {isLoggedIn && <NavLink to="/contacts" className={css.NavLinkMenu}>Contacts</NavLink>}
   </Box>
   {isLoggedIn ? (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <p>{user.email}</p>
+    <Box sx={{ display: 'flex', alignItems: 'center', marginRight: '20px'}}>
+      <Typography sx={{marginRight: '20px'}}>{user.email}</Typography>
       <LoginTwoToneIcon type="button" title="Log Out" onClick={() => dispatch(logOut())}/>
     </Box>
   ) : (

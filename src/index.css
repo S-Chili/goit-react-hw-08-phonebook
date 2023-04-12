@@ -22,7 +22,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url('https://pixabay.com/get/g1241ba93b68423f5b2dac195693183a009f65f881b8aca32357f57b998929faf1b43a5539bfcdb1c30004fe0810237b2d3a2010b4251b98c9307d45859f67e84_1280.jpg');
+  background-image: url('https://pixabay.com/get/g21a65df89337f1f0cf47ddcf43f6e6aad7d2b5cbd65770fbe1e65d91a5eae30506256caa3cf689d2b43481725e3b23a22708f6b4040765abfcfa7e8f9187cea7_1280.jpg');
   filter: blur(5px);
 }
 
