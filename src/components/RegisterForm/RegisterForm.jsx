@@ -39,7 +39,7 @@ const RegisterForm = () => {
    <form onSubmit={handleSubmit}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <TextField
-          id="input-with-icon-textfield"
+          // id="input-with-icon-textfield"
           name="name"
           label="Name"
           type="text"
@@ -51,7 +51,7 @@ const RegisterForm = () => {
           sx={{ marginBottom: '20px' }}
         />
          <TextField
-          id="input-with-icon-textfield"
+          // id="input-with-icon-textfield"
           name="email"
           label="Email"
           type="email"
@@ -63,7 +63,7 @@ const RegisterForm = () => {
           sx={{ marginBottom: '20px' }}
         />
         <TextField
-          id="input-with-icon-textfield"
+          // id="input-with-icon-textfield"
           name="password"
           label="Password"
           type="password"
