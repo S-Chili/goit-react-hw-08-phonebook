@@ -1,16 +1,15 @@
 import { Suspense } from 'react';
-import UserMenu from './UserMenu/UserMenu';
+import UserMenu from '../UserMenu/UserMenu';
 import { Outlet } from 'react-router-dom';
-import { LayoutContainer } from './Layout.styled';
-
+import css from './Layout.module.css'
 const Layout = () => {
   return (
     <div>
       <UserMenu />
       <Suspense fallback={null}>
-        <LayoutContainer>
+        <div className={css.LayoutContainer}>
           <Outlet />
-        </LayoutContainer>
+        </div>
       </Suspense>
     </div>
   );

@@ -15,7 +15,7 @@ const UserMenu = () => {
     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
   <Box sx={{ display: 'flex' }}>
     <NavLink to="/" className={css.NavLinkMenu}>Home</NavLink>
-    {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
+    {isLoggedIn && <NavLink to="/contacts" className={css.NavLinkMenu}>Contacts</NavLink>}
   </Box>
   {isLoggedIn ? (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>

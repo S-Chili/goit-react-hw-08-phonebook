@@ -42,7 +42,7 @@ const RegisterForm = () => {
           id="input-with-icon-textfield"
           name="name"
           label="Name"
-          type="name"
+          type="text"
           InputProps={{
             startAdornment: (
               <AccountCircle />
@@ -74,7 +74,7 @@ const RegisterForm = () => {
           }}
           sx={{ marginBottom: '20px' }}
         />
-        <SubmitButton type="submit">Login</SubmitButton>
+        <SubmitButton type="submit">Register</SubmitButton>
       </Box>
     </form>
   );
