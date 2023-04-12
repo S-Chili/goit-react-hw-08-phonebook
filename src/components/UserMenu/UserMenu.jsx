@@ -20,7 +20,7 @@ const UserMenu = () => {
   </Box>
   {isLoggedIn ? (
     <Box sx={{ display: 'flex', alignItems: 'center', marginRight: '20px'}}>
-      <Typography sx={{marginRight: '20px'}}>{user.name}</Typography>
+      {user && <Typography sx={{marginRight: '20px'}}>{user.name}</Typography>}
       <LoginTwoToneIcon type="button" title="Log Out" onClick={() => dispatch(logOut())}/>
     </Box>
   ) : (
