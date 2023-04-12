@@ -25,8 +25,8 @@ const UserMenu = () => {
     </Box>
   ) : (
     <Box sx={{ display: 'flex' }}>
-      <NavLink to="/login" className={css.NavLinkMenu}><LoginTwoToneIcon/>Login</NavLink>
-      <NavLink to="/register" className={css.NavLinkMenu}><HowToRegTwoToneIcon/>Register</NavLink>
+      <NavLink to="/login" className={css.NavLinkMenu}><LoginTwoToneIcon sx={{marginRight: '20px'}}/></NavLink>
+      <NavLink to="/register" className={css.NavLinkMenu}><HowToRegTwoToneIcon/></NavLink>
     </Box>
   )}
 </Box>
