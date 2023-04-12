@@ -1,56 +1,59 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import Contacts from '../pages/Contacts';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
+import { lazy, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
+import { RestrictedRoute } from './ResctictedRoute';
 import { PrivateRoute } from './PrivateRoute';
-import { RestrictedRoute } from './RestrictedRoute';
-import ProminentAppBar from './Contacts/AppBar';
-//import { Navigation } from './Contacts/Navigation';
+import { useDispatch } from 'react-redux';
+import { refreshUser } from 'redux/auth/operation';
+import { useAuth } from 'hooks/useAuth';
 
-export const useLocalStorage = (key, defaultValue) => {
-  const [state, setState] = useState(
-    () => JSON.parse(localStorage.getItem(key)) ?? defaultValue
-  );
+const LoginPage = lazy(() => import('../pages/Login'));
+const RegisterPage = lazy(() => import('../pages/Register'));
+const ContactsPage = lazy(() => import('../pages/Contacts'));
+const HomePage = lazy(() => import('../pages/Home'));
+
+export const App = () => {
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(state));
-  });
-  return [state, setState];
-};
+    dispatch(refreshUser());
+  }, [dispatch]);
 
-export default function App() {
-
-  return (
-    <div>
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Routes>
-      <Route path="/" element={<ProminentAppBar />}>
-        <Route index element={<Home />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute
+              redirectTo="/contacts"
+              component={<LoginPage />}
+            ></RestrictedRoute>
+          }
+        />
         <Route
           path="/register"
           element={
             <RestrictedRoute
               redirectTo="/contacts"
-              component={<Register />}
-            />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<Login />} />
+              component={<RegisterPage />}
+            ></RestrictedRoute>
           }
         />
         <Route
           path="/contacts"
           element={
-            <PrivateRoute redirectTo="/login" component={<Contacts />} />
+            <PrivateRoute
+              redirectTo="/login"
+              component={<ContactsPage />}
+            ></PrivateRoute>
           }
         />
       </Route>
     </Routes>
-  </div>
-);
-}
-   
+  );
+};
