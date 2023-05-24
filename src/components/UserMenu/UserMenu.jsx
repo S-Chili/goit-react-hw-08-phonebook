@@ -17,13 +17,13 @@ const UserMenu = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '20px' }}>
       <Box sx={{ display: 'flex' }}>
-        <NavLink to="/" className={css.NavLinkMenu}><MapsHomeWorkTwoToneIcon sx={{marginRight: '20px', fontSize: '30px'}}/></NavLink>
-        {isLoggedIn && <NavLink to="/contacts" className={css.NavLinkMenu}><ContactPhoneTwoToneIcon  sx={{ fontSize: '30px' }}/></NavLink>}
+        <NavLink to="/" className={css.NavLinkMenu}><MapsHomeWorkTwoToneIcon sx={{marginRight: '20px', fontSize: '30px', color: "#d0bac4"}}/></NavLink>
+        {isLoggedIn && <NavLink to="/contacts" className={css.NavLinkMenu}><ContactPhoneTwoToneIcon  sx={{ fontSize: '30px', color: "#d0bac4" }}/></NavLink>}
       </Box>
       {isLoggedIn ? (
         <Box sx={{ display: 'flex', alignItems: 'center', marginRight: '20px'}}>
           {user && <Typography sx={{marginRight: '20px', fontSize: '20px'}}>{user.name}</Typography>}
-          <LoginTwoToneIcon type="button" title="Log Out" onClick={() => dispatch(logOut())} sx={{ cursor: 'pointer', fontSize: '30px' }}/>
+          <LoginTwoToneIcon sx={{ cursor: 'pointer', fontSize: '30px'}} type="button" title="Log Out" onClick={() => dispatch(logOut())} />
         </Box>
       ) : (
         <Box sx={{ display: 'flex' }}>

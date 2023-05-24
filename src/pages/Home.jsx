@@ -5,15 +5,16 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import imageSrc from '../image/1654090338_26-celes-club-p-oboi-na-noutbuk-mramor-krasivie-28.jpg'
 
 const Home = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        alt="green iguana"
+        alt="mramor"
         height="140"
-        image="https://pixabay.com/get/g28e1b078a4614b87e1161f26cead0945636ee1ea0a4f67fe882e0667d7caf5c3dcd7fca528bcaf23c9b9dba06c222d4f9e442b500df305982765ef95d41a137a_1280.jpg"
+        image={imageSrc}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
