@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.8a4ff96c.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.52d82a1e.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.555ef9dd.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.a8a41bb4.js",
     "static/js/111.d75c6769.chunk.js": "/goit-react-hw-08-phonebook/static/js/111.d75c6769.chunk.js",
     "static/js/236.66ad2831.chunk.js": "/goit-react-hw-08-phonebook/static/js/236.66ad2831.chunk.js",
     "static/js/627.176c3c05.chunk.js": "/goit-react-hw-08-phonebook/static/js/627.176c3c05.chunk.js",
-    "static/js/277.59bcbd07.chunk.js": "/goit-react-hw-08-phonebook/static/js/277.59bcbd07.chunk.js",
+    "static/js/277.59430acd.chunk.js": "/goit-react-hw-08-phonebook/static/js/277.59430acd.chunk.js",
     "static/js/372.59a0598b.chunk.js": "/goit-react-hw-08-phonebook/static/js/372.59a0598b.chunk.js",
+    "static/media/avatar.jpg": "/goit-react-hw-08-phonebook/static/media/avatar.4e379a428aeb5ef5746e.jpg",
+    "static/media/1654090338_26-celes-club-p-oboi-na-noutbuk-mramor-krasivie-28.jpg": "/goit-react-hw-08-phonebook/static/media/1654090338_26-celes-club-p-oboi-na-noutbuk-mramor-krasivie-28.756852db6aad72e68575.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.8a4ff96c.css.map": "/goit-react-hw-08-phonebook/static/css/main.8a4ff96c.css.map",
-    "main.52d82a1e.js.map": "/goit-react-hw-08-phonebook/static/js/main.52d82a1e.js.map",
+    "main.555ef9dd.css.map": "/goit-react-hw-08-phonebook/static/css/main.555ef9dd.css.map",
+    "main.a8a41bb4.js.map": "/goit-react-hw-08-phonebook/static/js/main.a8a41bb4.js.map",
     "111.d75c6769.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/111.d75c6769.chunk.js.map",
     "236.66ad2831.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/236.66ad2831.chunk.js.map",
     "627.176c3c05.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/627.176c3c05.chunk.js.map",
-    "277.59bcbd07.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/277.59bcbd07.chunk.js.map",
+    "277.59430acd.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/277.59430acd.chunk.js.map",
     "372.59a0598b.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/372.59a0598b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a4ff96c.css",
-    "static/js/main.52d82a1e.js"
+    "static/css/main.555ef9dd.css",
+    "static/js/main.a8a41bb4.js"
   ]
 }
